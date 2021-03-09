@@ -1,21 +1,18 @@
-function checkTypeOfValue(checkValue){
-  let resultType;
+function checkTypeOfValue(checkValue) {
   let typeOfValue = typeof checkValue;
-  if (isNaN(checkValue) && (typeOfValue !== "string")){
-    resultType = undefined;
-    return resultType;
-  }
-  
-  switch (typeOfValue){
+
+  switch(typeOfValue) {
     case 'string':
-      resultType = "string";
-      break;
+      return "string";
     case 'number':
-      resultType = "number";
-      break;
+
+      if (isNaN(checkValue)) {
+        return undefined;
+      }
+      
+      return "number";
     default:
-      resultType = undefined;
+      return undefined;
   }
-  return resultType;
 }
-module.exports= checkTypeOfValue;
+module.exports = checkTypeOfValue;

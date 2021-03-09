@@ -1,7 +1,4 @@
-function maxValueInArray(arr){
-    arr.sort();
-    let maxValue = arr.length-1;
-    console.log(arr[maxValue]);
-    return arr[maxValue];
+function maxValueInArray(arr) {
+    return Math.max.apply(null, arr);
 }
-module.exports= maxValueInArray;
+module.exports = maxValueInArray;
