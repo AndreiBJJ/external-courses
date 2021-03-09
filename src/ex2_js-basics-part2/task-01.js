@@ -1,7 +1,7 @@
 function checkTypeOfValue(checkValue) {
   let typeOfValue = typeof checkValue;
 
-  switch(typeOfValue) {
+  switch (typeOfValue) {
     case 'string':
       return "string";
     case 'number':
