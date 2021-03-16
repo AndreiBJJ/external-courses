@@ -1,7 +1,6 @@
 let objStudent = {
-    name: "Ivan",
+    name: 'Ivan',
     age: 18,
-    hisParents: ["mother", "father"]
+    hisParents: ['mother', 'father']
 };
-
 delete objStudent.hisParents;

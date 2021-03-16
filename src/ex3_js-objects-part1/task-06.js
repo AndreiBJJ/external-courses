@@ -1,27 +1,16 @@
-function copyObj(obj) {
-  
+function copyObj(obj) { 
     if (!obj) {
         return obj;
     }
-
-    let deepCopyOfObj;
-
-    if (Array.isArray(obj)) {
-        deepCopyOfObj = [];
-    } else {
-        deepCopyOfObj = {};
-    }
-  
+    let deepCopyOfObj = (Array.isArray(obj)) ? [] : {};
     for (let k in obj) {
-    
+        
         if (typeof obj[k] === "object") {
             deepCopyOfObj[k] = copyObj(obj[k]);
         } else {
             deepCopyOfObj[k] = obj[k];
         }
-
     }
-
     return deepCopyOfObj;
 }
 module.exports = copyObj;
