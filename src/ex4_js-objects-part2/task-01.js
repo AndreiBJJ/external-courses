@@ -1,5 +1,5 @@
 function checkHasProperty(nameProperty, userObj) {
-    const obj = userObj;
+    const obj = Object.assign(userObj); //для избегания мутирования входного объекта
     const obj1 = {a: 1};
     obj.__proto__ = obj1;
     let result;

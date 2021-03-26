@@ -1,7 +1,7 @@
 function countOfElements(string) {
     let chartsOfArray = string.split('');
     let result = chartsOfArray.reduce((acc, value) => {
-        const obj = acc;
+        const obj = Object.assign(acc);
         obj[value] = (obj[value] || 0) + 1;
         return obj;
     },{})
