@@ -1,17 +1,9 @@
 function likeEvery (array, callback) {
-    let result;
     for (let i = 0; i < array.length; i++) {
-        
-        if ( callback(array[i], i, array) === true) {
-            continue;
-        } else {
-            result = false;
-            break;
+        if ( !callback(array[i], i, array)) {
+            return false;
         }
     }
-    if (result !== false) {
-        result = true;
-    }
-    return result;
+    return true;
 }
 module.exports = likeEvery;

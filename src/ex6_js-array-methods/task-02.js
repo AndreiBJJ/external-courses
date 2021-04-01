@@ -1,18 +1,10 @@
 function likeSome (array, callback) {
-    let result;
     for (let i = 0; i < array.length; i++) {
-        
-        if ( callback(array[i], i, array) === true) {
-            result = true;
-            break;
-        } else {
-            continue;
+        if (callback(array[i], i, array)) {
+            return true;
         }
     }
-    if (result !== true) {
-        result = false;
-    }
-    return result;
+    return false;
 }
 module.exports = likeSome;
 

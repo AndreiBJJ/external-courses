@@ -1,10 +1,8 @@
 function likeSlice (array, begin = 0, end = array.length) {
   let newArray = [];
-  let startPosition;
-  let endPosition;
+  let startPosition = (begin < 0) ? array.length + begin : begin;
+  let endPosition = (end < 0) ? array.length + end : end;
   array.forEach( (item, index) => {
-    startPosition = (begin < 0) ? array.length + begin : begin;
-    endPosition = (end < 0) ? array.length + end : end;
     if ((index >= startPosition) && (index < endPosition)) {
       newArray.push(item);
     }
