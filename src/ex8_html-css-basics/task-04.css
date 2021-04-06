@@ -1,0 +1,24 @@
+.part1 {
+  background-color: yellow;
+  font-size: 120%;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+.part2 {
+  background-color: green;
+  font-size: 18pt;
+  font-family: sans-serif;
+}
+
+.part3 {
+  background-color: rgb(0, 0, 255);
+  font-size: small;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "MyWeb";
+  src: url("http://fonts.gstatic.com/s/gloriahallelujah/v8/CA1k7SlXcY5kvI81M_R28cNDay8z-hHR7F16xrcXsJw.woff2");
+}
+p {
+  font-family: "MyWeb";
+}
