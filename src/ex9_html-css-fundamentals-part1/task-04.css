@@ -1,0 +1,6 @@
+.block1 {
+  width: 200px;
+  height: 100px;
+  background: #fc2626;
+  box-shadow: 5px 5px 0 #fc6868, 10px 10px 0 #f99;
+}
